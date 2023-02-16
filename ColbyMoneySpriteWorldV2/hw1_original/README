@@ -1,0 +1,22 @@
+To compile: javac *.java
+
+To run: java Test
+
+Be sure to run "java Test" in the hw4_original directory, otherwise the
+program will not be able to find its images.
+
+New functionality:
+
+-   Added adapter pattern to support RedSprite. The new red sprite travels straight until
+    reaching the canvas boundary, where it turns 90 degrees counterclockwise to continue traveling.
+
+-   Added strategy pattern to allow the 4 sprites user control when they are highlighted,
+    excluding the RedSprite. The sprites stop moving when they become highlighted, and when
+    they become highlighted, their original direction from before they became highlighted
+    is restored.
+
+-   new MoveType attribute which represents which movement strategy will be used by a given sprite
+
+-   MovementBehavior interface added along with three concrete strategies:
+    ConcreteMoveAuto, ConcreteMoveControl, and ConcreteMoveRedSprite
+
